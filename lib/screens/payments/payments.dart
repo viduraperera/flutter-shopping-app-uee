@@ -5,7 +5,6 @@ import 'package:untitled/models/payments.dart';
 import 'package:untitled/screens/payments/widgets/payment_widget.dart';
 
 class PaymentsScreen extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,18 +22,18 @@ class PaymentsScreen extends StatelessWidget {
           "Payment History",
           style: TextStyle(color: Colors.black),
         ),
-
       ),
       body: ListView(
         children: [
           Column(
-            children:           paymentsController.payments.map((payment) => PaymentWidget(paymentsModel: payment,)).toList()
-            ,
+            children: paymentsController.payments
+                .map((payment) => PaymentWidget(
+                      paymentsModel: payment,
+                    ))
+                .toList(),
           )
         ],
       ),
     );
   }
-
-
 }

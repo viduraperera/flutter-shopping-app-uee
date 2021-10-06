@@ -14,15 +14,14 @@ import 'package:uuid/uuid.dart';
 class PaymentsController extends GetxController {
   static PaymentsController instance = Get.find();
   String collection = "payments";
-  String url =
-      'https://us-central1-sneex-cbc6a.cloudfunctions.net/createPaymentIntent';
+  String url = 'https://us-central1-uee-app.cloudfunctions.net/createPaymentIntent';
   List<PaymentsModel> payments = [];
 
   @override
   void onReady() {
     super.onReady();
     StripePayment.setOptions(StripeOptions(
-        publishableKey: "pk_test_vdof9EwWNjWX6gglW2xjji3Y00mLAezzRK",
+        publishableKey: "pk_test_51JhRzkAEwJNqsuAZtpMVr2pSNXXDpskqYuaZMEaOIUnz5td1ufxLxS2F9KSWvkK3Je6WWbrwBad7qZWCjOG6pMWM00a65ZDM6F",
         androidPayMode: 'test'));
   }
 

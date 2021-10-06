@@ -31,6 +31,7 @@ class SingleProductWidget extends StatelessWidget {
                 child: Image.network(
                   product.image,
                   width: double.infinity,
+                  height: 280,
                 )),
           ),
           CustomText(
@@ -39,7 +40,7 @@ class SingleProductWidget extends StatelessWidget {
             weight: FontWeight.bold,
           ),
           CustomText(
-            text: product.brand,
+            text: product.category,
             color: Colors.grey,
           ),
           SizedBox(

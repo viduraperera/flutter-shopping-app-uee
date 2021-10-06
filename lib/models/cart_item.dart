@@ -25,9 +25,13 @@ class CartItemModel {
     image = data[IMAGE];
     name = data[NAME];
     quantity = data[QUANTITY];
-    cost = data[COST].toDouble();
+    //cost = double.parse(data[COST]);
+    cost = (data[COST]).toDouble();
+    //cost = double.tryParse(data[COST]);
     productId = data[PRODUCT_ID];
+    //price = double.parse(data[PRICE]);
     price = data[PRICE].toDouble();
+  //  price = double.tryParse(data[PRICE]);
 
   }
 
@@ -42,3 +46,10 @@ class CartItemModel {
   };
 
 }
+
+extension NumberParsing on String {
+  double toDouble() {
+    return double.parse(this);
+  }
+}
+
